@@ -1,0 +1,1 @@
+export const isRelativeGreaterThan = (part, full, percentage) => (part / full) > percentage;

@@ -1,0 +1,12 @@
+.followers {
+  position: relative;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.details {
+  margin-top: 10px;
+}
