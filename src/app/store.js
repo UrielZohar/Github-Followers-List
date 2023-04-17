@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import followersReducer from '../features/followers/followersSlice';
-import followerslistenerMiddleware from '../features/followers/followersMiddleware';
+import { followerslistenerMiddleware } from '../features/followers/followersMiddleware';
 
 export const store = configureStore({
   reducer: {
