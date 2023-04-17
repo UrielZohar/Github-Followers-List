@@ -1,14 +1,13 @@
-import { 
-  createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
+import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
 import { newFollowersSearch, getNextFollowersPage } from './followersSlice';
 
 
 // Create the middleware instance and methods
-export const listenerMiddleware = createListenerMiddleware();
+export const followerslistenerMiddleware = createListenerMiddleware();
 
 // Add one or more listener entries that look for specific actions.
 // They may contain any sync or async logic, similar to thunks.
-listenerMiddleware.startListening({
+followerslistenerMiddleware.startListening({
   matcher: isAnyOf(newFollowersSearch, getNextFollowersPage),
   effect: async (action, listenerApi) => {
     // Run whatever additional side-effect-y logic you want here
