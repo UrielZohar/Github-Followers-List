@@ -13,7 +13,6 @@ export const getNextFollowersPage = createAsyncThunk(
   'followers/nextFollowersPage',
   async (_, { getState }) => {
     const { currentUsername, currentPage} = selectFollowers(getState());
-    console.log(currentPage);
     const followersList = await getFollowers(currentUsername, currentPage + 1);
     // The value we return becomes the `fulfilled` action payload
     return {
@@ -39,7 +38,7 @@ export const newFollowersSearch = createAsyncThunk(
 );
 
 export const followersSlice = createSlice({
-  name: 'counter',
+  name: 'followersSlice',
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: { },
